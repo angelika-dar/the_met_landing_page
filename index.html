@@ -12,48 +12,222 @@
       rel="stylesheet"
     />
     <!-- link to my CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>THE MET</title>
   </head>
   <body>
-    <!-- Hero -->
-    <div class="hero">
-      <header class="header">
-        <div class="header-content">
-          <a class="logo-link" href="index.html">
-            THE <br />
-            MET
+    <!-- HEADER -->
+    <header class="header mb-lg">
+      <div class="header__content container grid grid-primary">
+        <div class="top-bar">
+          <a href="#" class="top-bar_logo-link">
+            <div class="top-bar__logo">
+              <span>the</span>
+              <span>met</span>
+            </div>
           </a>
-          <nav class="nav"></nav>
+          <div class="top-bar__icons">
+            <a href="tel:+1 234 555-55-55" class="icon icon--phone"></a>
+            <a href="#menu" class="icon icon--menu"></a>
+          </div>
         </div>
-      </header>
-      <h1 class="hero-title">Welcome to the met</h1>
-    </div>
+        <h1 class="title-lg text-center">Welcome <br />to the met</h1>
+      </div>
+    </header>
+    <main>
+      <!-- VISIT INFO -->
+      <section class="mb-xl container">
+        <p class="title-xs text-highlight">Plan your visit</p>
+        <div class="museum-hours">
+          <h3 class="title-md mb-xs">Museum hours</h3>
 
-    <main role="main">
-      <!-- Museum Hours Section -->
-      <section class="museum-hours">
-        <p class="plan-visit">Plan your visit</p>
-        <h2>Museum Hours</h2>
-        <div class="location">
-          <h3 class="location-name">The Met Fifth Avenue</h3>
-        </div>
-        <div class="location">
-          <h3 class="location-name">The Met Cloisters</h3>
+          <!-- The Met Fifth Avenue Hours -->
+          <div class="mb-md">
+            <h4 class="title-sm mb-xs">The Met Fifth Avenue</h4>
+            <div class="museum-location__hours grid grid-primary location-one">
+              <div class="museum-location__time mb-xs">10 am - 5 pm</div>
+              <div class="museum-location__days">Sun, Mon, Tue, Thu</div>
+              <div class="museum-location__time mb-xs">10 am - 9 pm</div>
+              <div class="museum-location__days">Fri, Sat</div>
+              <div class="museum-location__closed mb-sm">Closed</div>
+              <div class="museum-location__days">Wed</div>
+              <div class="museum-location__closed">Closed on</div>
+              <div class="museum-location__holiday-closure">
+                Thanksgiving Day, Dec 25, Jan 1, and the first Monday in May.
+              </div>
+            </div>
+          </div>
+
+          <!-- The Met Cloisters Hours -->
+          <div class="museum-location">
+            <h4 class="title-sm mb-xs">The Met Cloisters</h4>
+            <div class="museum-location__hours grid grid-primary">
+              <div class="museum-location__time mb-xs">10 am – 4:30 pm</div>
+              <div class="museum-location__days">Thu - Tue</div>
+              <div class="museum-location__closed">Closed</div>
+              <div class="museum-location__days mb-sm">Wed</div>
+              <div class="museum-location__closed">Closed on</div>
+              <div class="museum-location__holiday-closure">
+                Thanksgiving Day, Dec 25, Jan 1
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <!-- NOW ON THE VIEW -->
+      <section class="container grid grid-primary mb-xl">
+        <h2 class="title-md text-center">Now On View</h2>
+        <p class="now-on-view__description text-center mb-md">
+          Explore exhibition gallery guides, videos, articles, and more.
+        </p>
+        <!-- Exhibition -->
+        <div class="grid grid-primary mb-lg">
+          <div
+            class="img-container exhibition__item-left img-position-left mb-sm"
+          >
+            <img src="img/collection.png" alt="New look at old masters" />
+          </div>
+          <div class="img-container exhibition__item-rigth mb-sm">
+            <img
+              src="img/maxine.png"
+              alt="One of Maxine Helfman work - portrait"
+            />
+          </div>
+          <h3 class="text-highlight">A New Look at Old Masters</h3>
+          <p>December 12, 2024 – Through Spring 2025</p>
+        </div>
+        <!-- Exhibition -->
+        <div class="grid grid-secondary mb-lg">
+          <div class="img-container exhibition__item-left mb-sm">
+            <img src="img/tara.png" alt="Tara" />
+          </div>
+          <div class="img-container exhibition__item-middle mb-sm">
+            <img src="img/mandala-manjuvajra.png" alt="Mandala Manjuvajra" />
+          </div>
+          <div class="img-container exhibition__item-rigth mb-sm">
+            <img src="img/deity-vajrabhairava.png" alt="Deity Vajrabhairava" />
+          </div>
+          <h3 class="text-highlight">
+            Bodhisattvas of Wisdom, Compassion, and Power
+          </h3>
+          <p>March 27, 2024 – October 30, 2025</p>
+        </div>
+        <!-- Exhibition -->
+        <div class="grid grid-primary mb-lg">
+          <div class="img-container exhibition__item-left mb-sm">
+            <img
+              src="img/inspiring-walt-disney-clocks.png"
+              alt="Inspiring Walt Disney Clocks"
+            />
+          </div>
+          <div class="img-container exhibition__item-rigth mb-sm">
+            <img
+              src="img/inspiring-walt-disney-dancers.png"
+              alt="Inspiring Walt Disney Dancers"
+              class="img-position-center"
+            />
+          </div>
+          <h3 class="text-highlight">
+            Inspiring Walt Disney: The Animation of French Decorative Arts
+          </h3>
+          <p>December 10, 2024 – March 6, 2025</p>
+        </div>
+        <!-- View All Exhibition -->
+        <a href="#" class="btn btn-primary">View all exhibitions</a>
+      </section>
 
-      <!-- Now On View Section -->
-      <section class="now-on-view"></section>
+      <!-- MORE TO EXPLORE ONLINE -->
+      <section class="container grid grid-primary mb-lg">
+        <h2 class="title-md text-center mb-sm">More to Explore Online</h2>
+        <!-- More to Explore Item -->
+        <div class="grid grid-primary mb-lg">
+          <div class="img-container mb-sm">
+            <img src="img/collection-areas.png" alt="Collection areas" />
+          </div>
+          <h3 class="title-sm text-center text-highlight">Collection Areas</h3>
+          <p class="more-to-explore__description text-center">
+            These collection areas study, exhibit, and care for the objects in
+            The Met collection.
+          </p>
+        </div>
+        <!-- More to Explore Item -->
+        <div class="grid grid-primary mb-lg">
+          <div class="img-container mb-sm">
+            <img src="img/travel.png" alt="Egyptian sculptures" />
+          </div>
+          <h3 class="title-sm text-center text-highlight">Travel</h3>
+          <p class="more-to-explore__description text-center">
+            Travel with The Met connects the Museum's wide and diverse audience
+            to art, inspiration, and historical perspective.
+          </p>
+        </div>
+        <!-- More to Explore Item -->
+        <div class="grid grid-primary mb-lg">
+          <div class="img-container img-position-left mb-sm">
+            <img
+              src="img/virtual-group-tours.png"
+              alt="Two men looking at the painting"
+            />
+          </div>
+          <h3 class="title-sm text-center text-highlight">
+            Virtual Group Tours
+          </h3>
+          <p class="more-to-explore__description text-center">
+            Request a guided tour, reserve admission and lead your own small
+            group, or request a live virtual tour led by a Museum guide.
+          </p>
+        </div>
+      </section>
+      <!-- CONTACT US -->
+      <section class="container grid grid-primary mb-xxl">
+        <h2 class="title-md text-center mb-sm">Contact Us</h2>
 
-      <!-- More to Explore Online Section -->
-      <section class="more-to-explore"></section>
+        <div class="mb-md">
+          <h3 class="mb-sm">The Met Fifth Avenue</h3>
+          <p class="contact-us__label mb-xs">Phone</p>
+          <p class="text-bold mb-xs">+1 212-535-7710</p>
+          <p class="contact-us__label mb-xs">Address</p>
+          <p class="text-bold mb-xs">
+            1000 Fifth Avenue<br />
+            New York, NY 10028
+          </p>
+        </div>
 
-      <!-- Contact Us Section -->
-      <section class="contact-us"></section>
+        <div class="mb-lg">
+          <h3 class="mb-sm">The Met Cloisters</h3>
+          <p class="contact-us__label mb-xs">Phone</p>
+          <p class="text-bold mb-xs">+1 212-923-3700</p>
+          <p class="contact-us__label mb-xs">Address</p>
+          <p class="text-bold mb-xs">
+            99 Margaret Corbin Drive<br />
+            Fort Tryon Park<br />
+            New York, NY 10040
+          </p>
+        </div>
+
+        <form class="contact-us__form">
+          <input
+            class="contact-us__input"
+            type="text"
+            placeholder="Name"
+            required
+          />
+          <input
+            class="contact-us__input"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            class="contact-us__textarea mb-lg"
+            placeholder="Message"
+            required
+          ></textarea>
+          <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+      </section>
     </main>
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer"></footer>
   </body>
 </html>

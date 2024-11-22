@@ -1,0 +1,355 @@
+:root {
+    --accent-colour: #D12D35;
+    --font-color: #161616;
+  }
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--font-color);
+    font-family: Cinzel, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+} 
+
+/* =============
+   Typograpgy
+================ */
+
+.title-lg {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+.title-md{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.title-sm{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.title-xs{
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.top-bar_logo-link{
+    color: #FFFFFF;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    line-height: 0.8;
+    text-decoration: none;
+}
+
+.now-on-view__description{
+    letter-spacing: 2px;
+    line-height: 2;
+}
+
+.contact-us__label{
+    font-size: 0.88rem;
+}
+
+.more-to-explore__description{
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    padding: 0 0.5em;
+}
+    
+
+/* ===========
+    General
+============== */
+
+.container {
+    padding: 0 1em;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-primary {  /* two columns */
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+
+.grid-primary > * {
+    grid-column: span 2;
+}
+
+.grid-secondary { /* three columns */
+    grid-template-columns: repeat(3, 1fr); 
+    column-gap: 10px;
+}
+
+.grid-secondary > * {
+    grid-column: span 3;
+}
+
+.img-container {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; /* default */
+  }
+
+.img-position-left img {
+    object-position: left;
+} 
+
+
+/* ===========
+    Header
+============== */
+
+.header{
+    background-image: url(../img/hero-bg.png);
+    background-color: #bab7b7;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 1em;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16em;
+}
+
+.top-bar__logo{
+    display: flex;
+    flex-direction: column; 
+}
+
+.top-bar_logo-link:hover,
+.icon:hover{
+    transform: scale(1.15);
+}
+
+.top-bar__icons{
+    display: flex;
+    gap: 1.4em;
+}
+
+.icon {
+    display: block;
+    height: 24px;
+    width: 24px;
+    background-size: cover;
+    background-position: center;
+    }
+
+.icon--phone{
+    background-image: url(../img/icons/icon-phone.svg);
+    position: relative;
+}
+
+.icon--menu{
+    background-image: url(../img/icons/icon-burger.svg);
+    transition: all 0.3s ease;
+}
+
+.icon--menu:hover{
+    background-image: url(../img/icons/icon-burger-hover.svg);
+}
+
+
+/* ===============
+    Visit Info
+================== */
+
+.museum-location__hours.location-one {
+grid-template-columns: 38% 1fr;
+}
+
+.museum-location__time,
+.museum-location__closed {
+  grid-column: 1/2;
+}
+
+.museum-location__days {
+    grid-column: 2/3;
+}
+
+
+/* ================
+    Now On View
+=================== */
+
+.exhibition__item-left {
+    grid-column: 1 / 2;
+}
+
+.exhibition__item-rigth {
+    grid-column: 2 / 3;
+}
+
+.exhibition__item-middle {
+    grid-column: 2 / 3;
+}
+
+.grid-secondary
+.exhibition__item-left {
+    grid-column: 1 / 2;
+}
+
+.grid-secondary
+.exhibition__item-rigth {
+    grid-column: 3 / 4;
+}
+
+
+/* ===========
+    Form
+============== */
+
+.contact-us__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-us__input,
+.contact-us__textarea {
+    padding: 0.8em;
+    font-size: 1rem;
+    border: none;
+    background-color: #f3f3f7;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+.contact-us__input::placeholder,
+.contact-us__textarea::placeholder {
+    color: #7E7E83;
+    font-size: 0.88rem;
+} 
+
+.contact-us__input:focus,
+.contact-us__textarea:focus {
+    outline: none;
+    box-shadow: 0 0 4px #161616;
+} 
+
+.contact-us__textarea {
+    min-height: 8em;
+    resize: none;
+}
+
+
+/* ===========
+    Footer
+============== */
+
+.footer{
+    background-image: url(../img/footer.png);
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    transform: scale(1.8);
+    object-position: center;
+}
+
+
+/* ==================
+   Button Styles
+=====================*/
+
+.btn{
+    font-family: inherit;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.btn-primary {
+color: #FFFFFF;
+background-color: var(--accent-colour);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+background-color: #AE1C23
+}
+
+.btn-primary:link {
+background-color: #EB343D;
+}
+
+
+/* =========================
+    Text Utility Classes
+============================*/
+
+.text-center {
+    text-align: center;
+}
+
+.text-highlight {
+    color: var(--accent-colour);
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+
+/* =========================
+    Margin Utility Classes
+============================*/
+
+.mb-xs {
+    margin-bottom: 0.5em;
+}
+
+.mb-sm {
+margin-bottom: 1em;
+}
+
+.mb-md {
+margin-bottom: 2em;
+}
+
+.mb-lg {
+margin-bottom: 3em;
+}
+
+.mb-xl {
+margin-bottom: 5em;
+}
+
+.mb-xxl {
+margin-bottom: 12em;
+}
+
+
+/* ==================
+    Media Quaries
+=====================*/
+
