@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header mb-lg">
+    <header class="header pt-sm mb-lg">
       <div class="header__content container grid grid-primary">
         <div class="top-bar">
           <a href="#" class="top-bar_logo-link">
@@ -31,63 +31,66 @@
             <a href="#menu" class="icon icon--menu"></a>
           </div>
         </div>
-        <h1 class="title-lg text-center">Welcome <br />to the met</h1>
+        <h1 class="header__title title-lg text-center">
+          Welcome <br />to the met
+        </h1>
       </div>
     </header>
     <main>
       <!-- VISIT INFO -->
-      <section class="mb-xl container">
-        <p class="title-xs text-highlight">Plan your visit</p>
-        <div class="museum-hours">
+      <section class="container grid grid-primary mb-xl">
+        <div class="visit-info-header">
+          <p class="title-xs text-highlight">Plan your visit</p>
           <h3 class="title-md mb-xs">Museum hours</h3>
+        </div>
 
-          <!-- The Met Fifth Avenue Hours -->
-          <div class="mb-md">
-            <h4 class="title-sm mb-xs">The Met Fifth Avenue</h4>
-            <div class="museum-location__hours grid grid-primary location-one">
-              <div class="museum-location__time mb-xs">10 am - 5 pm</div>
-              <div class="museum-location__days">Sun, Mon, Tue, Thu</div>
-              <div class="museum-location__time mb-xs">10 am - 9 pm</div>
-              <div class="museum-location__days">Fri, Sat</div>
-              <div class="museum-location__closed mb-sm">Closed</div>
-              <div class="museum-location__days">Wed</div>
-              <div class="museum-location__closed">Closed on</div>
-              <div class="museum-location__holiday-closure">
-                Thanksgiving Day, Dec 25, Jan 1, and the first Monday in May.
-              </div>
+        <!-- <div class="museum-locations"></div> -->
+        <!-- The Met Fifth Avenue Hours -->
+        <div class="museum-location mb-md">
+          <h4 class="title-sm mb-xs">The Met Fifth Avenue</h4>
+          <div class="museum-location__hours grid grid-primary">
+            <div class="museum-location__time mb-xs">10 am - 5 pm</div>
+            <div class="museum-location__days">Sun, Mon, Tue, Thu</div>
+            <div class="museum-location__time mb-xs">10 am - 9 pm</div>
+            <div class="museum-location__days">Fri, Sat</div>
+            <div class="museum-location__closed mb-sm">Closed</div>
+            <div class="museum-location__days">Wed</div>
+            <div class="museum-location__closed">Closed on</div>
+            <div class="museum-location__holiday-closure">
+              Thanksgiving Day, Dec 25, Jan 1, and the first Monday in May.
             </div>
           </div>
+        </div>
 
-          <!-- The Met Cloisters Hours -->
-          <div class="museum-location">
-            <h4 class="title-sm mb-xs">The Met Cloisters</h4>
-            <div class="museum-location__hours grid grid-primary">
-              <div class="museum-location__time mb-xs">10 am – 4:30 pm</div>
-              <div class="museum-location__days">Thu - Tue</div>
-              <div class="museum-location__closed">Closed</div>
-              <div class="museum-location__days mb-sm">Wed</div>
-              <div class="museum-location__closed">Closed on</div>
-              <div class="museum-location__holiday-closure">
-                Thanksgiving Day, Dec 25, Jan 1
-              </div>
+        <!-- The Met Cloisters Hours -->
+        <div class="museum-location">
+          <h4 class="title-sm mb-xs">The Met Cloisters</h4>
+          <div class="museum-location__hours grid grid-primary">
+            <div class="museum-location__time mb-xs">10 am – 4:30 pm</div>
+            <div class="museum-location__days">Thu - Tue</div>
+            <div class="museum-location__closed">Closed</div>
+            <div class="museum-location__days mb-sm">Wed</div>
+            <div class="museum-location__closed">Closed on</div>
+            <div class="museum-location__holiday-closure">
+              Thanksgiving Day, Dec 25, Jan 1
             </div>
           </div>
         </div>
       </section>
       <!-- NOW ON THE VIEW -->
-      <section class="container grid grid-primary mb-xl">
-        <h2 class="title-md text-center">Now On View</h2>
+      <section class="container grid grid-primary mb-lg">
+        <h2 class="title-md text-center mb-xs">Now On View</h2>
         <p class="now-on-view__description text-center mb-md">
           Explore exhibition gallery guides, videos, articles, and more.
         </p>
         <!-- Exhibition -->
         <div class="grid grid-primary mb-lg">
           <div
-            class="img-container exhibition__item-left img-position-left mb-sm"
+            class="img-container exhibition__item img-position-left wide mb-sm"
           >
             <img src="img/collection.png" alt="New look at old masters" />
           </div>
-          <div class="img-container exhibition__item-rigth mb-sm">
+          <div class="img-container exhibition__item square mb-sm">
             <img
               src="img/maxine.png"
               alt="One of Maxine Helfman work - portrait"
@@ -98,13 +101,13 @@
         </div>
         <!-- Exhibition -->
         <div class="grid grid-secondary mb-lg">
-          <div class="img-container exhibition__item-left mb-sm">
+          <div class="img-container exhibition__item mb-sm">
             <img src="img/tara.png" alt="Tara" />
           </div>
-          <div class="img-container exhibition__item-middle mb-sm">
+          <div class="img-container exhibition__item mb-sm">
             <img src="img/mandala-manjuvajra.png" alt="Mandala Manjuvajra" />
           </div>
-          <div class="img-container exhibition__item-rigth mb-sm">
+          <div class="img-container exhibition__item display mb-sm">
             <img src="img/deity-vajrabhairava.png" alt="Deity Vajrabhairava" />
           </div>
           <h3 class="text-highlight">
@@ -114,17 +117,18 @@
         </div>
         <!-- Exhibition -->
         <div class="grid grid-primary mb-lg">
-          <div class="img-container exhibition__item-left mb-sm">
+          <div class="img-container exhibition__item square mb-sm">
             <img
               src="img/inspiring-walt-disney-clocks.png"
               alt="Inspiring Walt Disney Clocks"
             />
           </div>
-          <div class="img-container exhibition__item-rigth mb-sm">
+          <div
+            class="img-container exhibition__item wide img-position-top mb-sm"
+          >
             <img
               src="img/inspiring-walt-disney-dancers.png"
               alt="Inspiring Walt Disney Dancers"
-              class="img-position-center"
             />
           </div>
           <h3 class="text-highlight">
@@ -133,14 +137,18 @@
           <p>December 10, 2024 – March 6, 2025</p>
         </div>
         <!-- View All Exhibition -->
-        <a href="#" class="btn btn-primary">View all exhibitions</a>
+        <a href="#" class="view-all-link btn btn-primary mb-lg"
+          >View all exhibitions</a
+        >
       </section>
 
       <!-- MORE TO EXPLORE ONLINE -->
-      <section class="container grid grid-primary mb-lg">
-        <h2 class="title-md text-center mb-sm">More to Explore Online</h2>
+      <section class="explore-online container grid grid-primary mb-lg">
+        <h2 class="title-md text-center mb-sm pd-lf-rt">
+          More to Explore Online
+        </h2>
         <!-- More to Explore Item -->
-        <div class="grid grid-primary mb-lg">
+        <div class="explore-item grid grid-primary mb-lg">
           <div class="img-container mb-sm">
             <img src="img/collection-areas.png" alt="Collection areas" />
           </div>
@@ -151,7 +159,7 @@
           </p>
         </div>
         <!-- More to Explore Item -->
-        <div class="grid grid-primary mb-lg">
+        <div class="explore-item grid grid-primary mb-lg">
           <div class="img-container mb-sm">
             <img src="img/travel.png" alt="Egyptian sculptures" />
           </div>
@@ -162,7 +170,7 @@
           </p>
         </div>
         <!-- More to Explore Item -->
-        <div class="grid grid-primary mb-lg">
+        <div class="explore-item grid grid-primary mb-lg">
           <div class="img-container img-position-left mb-sm">
             <img
               src="img/virtual-group-tours.png"
@@ -179,33 +187,33 @@
         </div>
       </section>
       <!-- CONTACT US -->
-      <section class="container grid grid-primary mb-xxl">
+      <section class="container grid grid-primary mb-xl">
         <h2 class="title-md text-center mb-sm">Contact Us</h2>
+        <div class="contact-us__container">
+          <div class="mb-md">
+            <h3 class="mb-sm">The Met Fifth Avenue</h3>
+            <p class="contact-us__label mb-xs">Phone</p>
+            <p class="text-bold mb-xs">+1 212-535-7710</p>
+            <p class="contact-us__label mb-xs">Address</p>
+            <p class="text-bold mb-xs">
+              1000 Fifth Avenue<br />
+              New York, NY 10028
+            </p>
+          </div>
 
-        <div class="mb-md">
-          <h3 class="mb-sm">The Met Fifth Avenue</h3>
-          <p class="contact-us__label mb-xs">Phone</p>
-          <p class="text-bold mb-xs">+1 212-535-7710</p>
-          <p class="contact-us__label mb-xs">Address</p>
-          <p class="text-bold mb-xs">
-            1000 Fifth Avenue<br />
-            New York, NY 10028
-          </p>
+          <div class="mb-lg">
+            <h3 class="mb-sm">The Met Cloisters</h3>
+            <p class="contact-us__label mb-xs">Phone</p>
+            <p class="text-bold mb-xs">+1 212-923-3700</p>
+            <p class="contact-us__label mb-xs">Address</p>
+            <p class="text-bold mb-xs">
+              99 Margaret Corbin Drive<br />
+              Fort Tryon Park<br />
+              New York, NY 10040
+            </p>
+          </div>
         </div>
-
-        <div class="mb-lg">
-          <h3 class="mb-sm">The Met Cloisters</h3>
-          <p class="contact-us__label mb-xs">Phone</p>
-          <p class="text-bold mb-xs">+1 212-923-3700</p>
-          <p class="contact-us__label mb-xs">Address</p>
-          <p class="text-bold mb-xs">
-            99 Margaret Corbin Drive<br />
-            Fort Tryon Park<br />
-            New York, NY 10040
-          </p>
-        </div>
-
-        <form class="contact-us__form">
+        <form class="contact-us__form pb-xs">
           <input
             class="contact-us__input"
             type="text"
@@ -219,7 +227,7 @@
             required
           />
           <textarea
-            class="contact-us__textarea mb-lg"
+            class="contact-us__textarea mb-sm"
             placeholder="Message"
             required
           ></textarea>

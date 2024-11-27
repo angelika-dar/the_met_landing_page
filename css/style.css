@@ -14,6 +14,7 @@ body {
     font-family: Cinzel, sans-serif;
     font-size: 1rem;
     line-height: 1.6;
+    margin: 0 auto;
 } 
 
 /* =============
@@ -21,9 +22,10 @@ body {
 ================ */
 
 .title-lg {
-    color: white;
+    color: whitesmoke;
     font-size: 2.5rem;
     font-weight: 700;
+    text-shadow: 0 0 1px black;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
@@ -44,12 +46,13 @@ body {
 }
 
 .top-bar_logo-link{
-    color: #FFFFFF;
+    color: whitesmoke;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.2rem;
     line-height: 0.8;
     text-decoration: none;
+    text-shadow: 0 0 1px black;
 }
 
 .now-on-view__description{
@@ -73,7 +76,7 @@ body {
 ============== */
 
 .container {
-    padding: 0 1em;
+    padding: 0 20px;
 }
 
 .grid {
@@ -127,14 +130,18 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    padding-top: 1em;
+    
+}
+
+.header__content{
+    height: 100vh;
+    grid-template-rows: 35% 65%;
 }
 
 .top-bar{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-bottom: 16em;
+    grid-row: 1;
 }
 
 .top-bar__logo{
@@ -142,14 +149,9 @@ body {
     flex-direction: column; 
 }
 
-.top-bar_logo-link:hover,
-.icon:hover{
-    transform: scale(1.15);
-}
-
 .top-bar__icons{
     display: flex;
-    gap: 1.4em;
+    gap: 2em;
 }
 
 .icon {
@@ -159,6 +161,10 @@ body {
     background-size: cover;
     background-position: center;
     }
+
+.icon:hover{
+    transform: scale(1.15);
+}
 
 .icon--phone{
     background-image: url(../img/icons/icon-phone.svg);
@@ -173,50 +179,31 @@ body {
 .icon--menu:hover{
     background-image: url(../img/icons/icon-burger-hover.svg);
 }
+.header__title{
+    grid-row: 2;
+}
+
 
 
 /* ===============
     Visit Info
 ================== */
 
-.museum-location__hours.location-one {
-grid-template-columns: 38% 1fr;
+.museum-location__hours > * {
+  grid-column: span 1;
 }
 
-.museum-location__time,
-.museum-location__closed {
-  grid-column: 1/2;
-}
-
-.museum-location__days {
-    grid-column: 2/3;
-}
+ .museum-location__holiday-closure{
+    grid-column: span 2;
+} 
 
 
 /* ================
     Now On View
 =================== */
 
-.exhibition__item-left {
-    grid-column: 1 / 2;
-}
-
-.exhibition__item-rigth {
-    grid-column: 2 / 3;
-}
-
-.exhibition__item-middle {
-    grid-column: 2 / 3;
-}
-
-.grid-secondary
-.exhibition__item-left {
-    grid-column: 1 / 2;
-}
-
-.grid-secondary
-.exhibition__item-rigth {
-    grid-column: 3 / 4;
+.exhibition__item {
+    grid-column: span 1;
 }
 
 
@@ -265,10 +252,8 @@ grid-template-columns: 38% 1fr;
 .footer{
     background-image: url(../img/footer.png);
     background-size: cover;
-    background-position: center;
     height: 180px;
     transform: scale(1.8);
-    object-position: center;
 }
 
 
@@ -304,7 +289,7 @@ background-color: #EB343D;
 
 
 /* =========================
-    Text Utility Classes
+    Utility Classes
 ============================*/
 
 .text-center {
@@ -319,33 +304,37 @@ background-color: #EB343D;
     font-weight: 700;
 }
 
+.display{
+    display: block;
+}
 
-/* =========================
-    Margin Utility Classes
-============================*/
+
+/* ==================================
+    Margin/Padding Utility Classes
+===================================== */
 
 .mb-xs {
     margin-bottom: 0.5em;
 }
 
 .mb-sm {
-margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .mb-md {
-margin-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 .mb-lg {
-margin-bottom: 3em;
+    margin-bottom: 4em;
 }
 
-.mb-xl {
-margin-bottom: 5em;
+.mb-xl{
+    margin-bottom: 7em;
 }
 
-.mb-xxl {
-margin-bottom: 12em;
+.pt-sm{
+    padding-top: 1.5em;
 }
 
 
@@ -353,3 +342,244 @@ margin-bottom: 12em;
     Media Quaries
 =====================*/
 
+@media (min-width: 576px){  /* on tablet*/
+    
+    /* layout */
+    .container{
+        padding: 0 72px;
+    }
+
+    .grid-primary,
+    .grid-secondary {  /* six columns */
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 24px;
+    }
+
+    .grid-primary > *,
+    .grid-secondary > * {  
+        grid-column: span 6;
+    }
+
+    .visit-info-header{
+        grid-column: 1/4;
+    }
+
+    .museum-location{
+        grid-column: 4/-1;
+    }
+
+    .museum-location__hours{
+        grid-template-columns: 40% 1fr;
+        
+    }
+    
+    .museum-location__hours > * {
+        grid-column: span 1;  
+    }
+
+    .museum-location__holiday-closure{
+        grid-column: span 2;
+    }
+
+    .exhibition__item{
+        grid-column: span 3;
+    }
+
+    .wide{
+        grid-column: span 4;
+    }
+
+    .square{
+        grid-column: span 2;
+    }
+
+    .view-all-link{
+        grid-column: 2/6
+    }
+
+    .explore-online > * {
+        grid-column: 2/6
+    }
+
+    .contact-us__container,
+    .contact-us__form
+    {
+        grid-column: span 3;
+    }
+
+    /* typography & margin/padding */
+
+    .title-lg {
+        font-size: 4rem;
+    }
+
+    .title-md{
+        font-size: 2.8rem;
+        line-height: 1;
+    }
+
+    .mb-lg {
+        margin-bottom: 5em;
+    }
+
+    .pt-sm{
+        padding-top: 2.5em;
+    }
+
+    /* other */
+
+    .icon {
+        height: 32px;
+        width: 32px;
+    }
+
+    .top-bar__icons{
+        gap: 4em;
+    }
+
+    .top-bar_logo-link{
+        font-size: 1.8rem;
+    }
+
+    .now-on-view__description{
+        padding: 0 5em;
+    }
+
+    .img-container {
+        height: 186px;
+    }
+
+    .img-position-top img{
+        object-position: center -30px;
+    }
+
+    .display{
+        display: none;
+    }
+
+    .grid-secondary div{
+        height: 284px;
+    }
+
+    .explore-online .img-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer{
+        height: 356px;
+        transform: scale(1.2);
+    }
+ 
+        
+}
+
+@media (min-width: 1024px){ /* on desktop*/
+
+    /* layout */
+    .container{
+        max-width: 1260px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .grid { 
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 24px;
+    }
+
+    .grid > * {  
+        grid-column: span 12;
+    }
+
+    .header__content{
+        grid-template-rows: 30% 70%;
+    }
+
+    .visit-info-header{
+        grid-column: 1/7;
+    }
+
+    .museum-location{
+        grid-column: 7/-1;
+    }
+
+    .museum-location__hours{
+        grid-template-columns: 25% 1fr;
+        
+    }
+
+    .museum-location__hours > * {
+        grid-column: span 1;  
+    }
+
+    .museum-location__holiday-closure{
+        grid-column: span 2;
+    }
+
+    .exhibition__item{
+        grid-column: span 4;
+    }
+
+    .wide{
+        grid-column: span 8;
+    }
+
+    .square{
+        grid-column: span 4;
+    }
+
+    .view-all-link{
+        grid-column: 5/9;
+        
+    }
+
+    .explore-item{
+        grid-column: span 4;
+    }
+
+    .contact-us__container{
+        grid-column: span 7;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-us__container > *{
+        grid-column: span 1;
+    }
+    
+    .contact-us__form
+    { 
+        grid-column: span 5;
+    }
+
+    /* typography & margin/padding */
+
+    .title-lg {
+        font-size: 4.5rem;
+    }
+
+    .pd-lf-rt{
+        padding: 0 5em;
+    }
+
+    /* other */
+
+    .now-on-view__description{
+        padding: 0 20em;
+    }
+
+    .img-container {
+        height: 320px;
+    }
+
+    .display{
+        display: block;
+    }
+
+    .footer{
+        height: 600px;
+        transform: none;
+    } 
+    
+}
