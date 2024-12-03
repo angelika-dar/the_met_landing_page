@@ -1,6 +1,6 @@
 # THE MET Landing Page
 
-Welcome to THE MET Landing Page project! This project is a responsive website for "THE MET" (The Metropolitan Museum of Art), built using HTML and SCSS.
+Welcome to THE MET Landing Page project! This project is a responsive website for "THE MET" (The Metropolitan Museum of Art), built using HTML and CSS.
 
 ## Demo
 
