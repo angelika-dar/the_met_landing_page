@@ -17,7 +17,7 @@
   </head>
   <body>
     <!-- HEADER -->
-    <header class="header pt-sm mb-lg">
+    <header class="header pt-sm">
       <div class="header__content container grid grid-primary">
         <div class="top-bar">
           <a href="#" class="top-bar_logo-link">
@@ -27,7 +27,7 @@
             </div>
           </a>
           <div class="top-bar__icons">
-            <a href="tel:+1 234 555-55-55" class="icon icon--phone"></a>
+            <a href="tel:+1 212 535 7710" class="icon icon--phone"></a>
             <a href="#menu" class="icon icon--menu"></a>
           </div>
         </div>
@@ -36,15 +36,68 @@
         </h1>
       </div>
     </header>
-    <main>
+
+    <!-- MENU -->
+    <aside class="page__menu pt-sm" id="menu">
+      <div class="menu">
+        <div class="container">
+          <div class="top-bar mb-md">
+            <a href="#" class="top-bar_logo-link">
+              <div class="top-bar__logo">
+                <span>the</span>
+                <span>met</span>
+              </div>
+            </a>
+            <a href="#" class="icon icon--x">x</a>
+          </div>
+
+          <div>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li>
+                  <a class="nav__link" href="#">Home</a>
+                </li>
+                <li>
+                  <a class="nav__link" href="#about-us">About Us</a>
+                </li>
+                <li>
+                  <a class="nav__link" href="#now-on-view">Now on View</a>
+                </li>
+                <li>
+                  <a class="nav__link" href="#explore-online">Explore Online</a>
+                </li>
+                <li class="mb-md">
+                  <a class="nav__link" href="#contacts">Contacts</a>
+                </li>
+              </ul>
+
+              <div class="mb-sm">
+                <p>The Met Fifth Avenu</p>
+                <a href="tel:+1 234 5555-55-55" class="menu__phone-number">
+                  +1 212-535-7710
+                </a>
+              </div>
+
+              <div>
+                <p>The Met Cloisters</p>
+                <a href="tel:+1 234 5555-55-55" class="menu__phone-number">
+                  +1 212-923-3700
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main pt-xl pb-xxl">
       <!-- VISIT INFO -->
-      <section class="container grid grid-primary mb-xl">
+      <section class="container grid grid-primary mb-xl" id="about-us">
         <div class="visit-info-header">
           <p class="title-xs text-highlight">Plan your visit</p>
           <h3 class="title-md mb-xs">Museum hours</h3>
         </div>
 
-        <!-- <div class="museum-locations"></div> -->
         <!-- The Met Fifth Avenue Hours -->
         <div class="museum-location mb-md">
           <h4 class="title-sm mb-xs">The Met Fifth Avenue</h4>
@@ -77,12 +130,14 @@
           </div>
         </div>
       </section>
+
       <!-- NOW ON THE VIEW -->
-      <section class="container grid grid-primary mb-lg">
+      <section class="container grid grid-primary mb-lg" id="now-on-view">
         <h2 class="title-md text-center mb-xs">Now On View</h2>
         <p class="now-on-view__description text-center mb-md">
           Explore exhibition gallery guides, videos, articles, and more.
         </p>
+
         <!-- Exhibition -->
         <div class="grid grid-primary mb-lg">
           <div
@@ -99,6 +154,7 @@
           <h3 class="text-highlight">A New Look at Old Masters</h3>
           <p>December 12, 2024 – Through Spring 2025</p>
         </div>
+
         <!-- Exhibition -->
         <div class="grid grid-secondary mb-lg">
           <div class="img-container exhibition__item mb-sm">
@@ -115,6 +171,7 @@
           </h3>
           <p>March 27, 2024 – October 30, 2025</p>
         </div>
+
         <!-- Exhibition -->
         <div class="grid grid-primary mb-lg">
           <div class="img-container exhibition__item square mb-sm">
@@ -136,6 +193,7 @@
           </h3>
           <p>December 10, 2024 – March 6, 2025</p>
         </div>
+
         <!-- View All Exhibition -->
         <a href="#" class="view-all-link btn btn-primary mb-lg"
           >View all exhibitions</a
@@ -143,10 +201,14 @@
       </section>
 
       <!-- MORE TO EXPLORE ONLINE -->
-      <section class="explore-online container grid grid-primary mb-lg">
+      <section
+        class="explore-online container grid grid-primary mb-lg"
+        id="explore-online"
+      >
         <h2 class="title-md text-center mb-sm pd-lf-rt">
           More to Explore Online
         </h2>
+
         <!-- More to Explore Item -->
         <div class="explore-item grid grid-primary mb-lg">
           <div class="img-container mb-sm">
@@ -158,6 +220,7 @@
             The Met collection.
           </p>
         </div>
+
         <!-- More to Explore Item -->
         <div class="explore-item grid grid-primary mb-lg">
           <div class="img-container mb-sm">
@@ -169,6 +232,7 @@
             to art, inspiration, and historical perspective.
           </p>
         </div>
+
         <!-- More to Explore Item -->
         <div class="explore-item grid grid-primary mb-lg">
           <div class="img-container img-position-left mb-sm">
@@ -186,8 +250,9 @@
           </p>
         </div>
       </section>
+
       <!-- CONTACT US -->
-      <section class="container grid grid-primary mb-xl">
+      <section class="container grid grid-primary" id="contacts">
         <h2 class="title-md text-center mb-sm">Contact Us</h2>
         <div class="contact-us__container">
           <div class="mb-md">
@@ -213,7 +278,7 @@
             </p>
           </div>
         </div>
-        <form class="contact-us__form pb-xs">
+        <form onsubmit="this.reset(); return false;" class="contact-us__form">
           <input
             class="contact-us__input"
             type="text"
@@ -235,6 +300,7 @@
         </form>
       </section>
     </main>
+
     <!-- FOOTER -->
     <footer class="footer"></footer>
   </body>
