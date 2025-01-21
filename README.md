@@ -4,7 +4,7 @@ Welcome to THE MET Landing Page project! This project is a responsive website fo
 
 ## Demo
 
-Check out the [DEMO](https://anzhelika-kuchma.github.io/the_met_landing_page/) to see it in action!
+Check out the [DEMO](https://angelika-dar.github.io/the_met_landing_page/) to see it in action!
 
 
 ## Mockup
